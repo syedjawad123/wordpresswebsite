@@ -1,9 +1,9 @@
 <?php
 /** @desc this loads the composer autoload file */
-// require_once dirname( __DIR__ ) . '/wordpresswebsite/vendor/autoload.php';
-// /** @desc this instantiates Dotenv and passes in our path to .env */
-// $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
-// $dotenv->load();
+require_once dirname( __DIR__ ) . '/vendor/autoload.php';
+/** @desc this instantiates Dotenv and passes in our path to .env */
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
+$dotenv->load();
 
 /**
  * The base configuration for WordPress
