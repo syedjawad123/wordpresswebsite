@@ -1,4 +1,10 @@
 <?php
+/** @desc this loads the composer autoload file */
+require_once dirname( __DIR__ ) . '/wordpresswebsite/vendor/autoload.php';
+/** @desc this instantiates Dotenv and passes in our path to .env */
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
+$dotenv->load();
+
 /**
  * The base configuration for WordPress
  *
@@ -20,13 +26,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'fneziqmy_word' );
+define( 'DB_NAME',  getenv('DB_NAME'));
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', getenv('DB_USER') );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', getenv('DB_PASSWORD') );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
