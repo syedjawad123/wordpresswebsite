@@ -1,6 +1,6 @@
 <?php
 /** @desc this loads the composer autoload file */
-require_once dirname( __DIR__ ) . 'public_html/vendor/autoload.php';
+require_once dirname( __DIR__ ) . '/public_html/vendor/autoload.php';
 /** @desc this instantiates Dotenv and passes in our path to .env */
 $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
 $dotenv->load();
